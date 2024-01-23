@@ -1,0 +1,16 @@
+/*fonts*/
+@font-face {
+    font-family: silkscreen;
+    src: url(/fonts/silkscreen_regular.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: silkscreen_bold;
+    src: url(/fonts/silkscreen_bold.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+/*colors*/
