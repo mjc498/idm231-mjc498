@@ -5,9 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zodiac</title>
     <link rel="stylesheet" href="./css/zodiac.css" type="text/css">
-    <script src="./javascript/zodiac.js"></script>
 </head>
+
 <body>
-    <h1>Welcome!</h1>
+    <header>
+        <h1>
+            SUPER MARIO ZODIAC WORLD
+        </h1>
+    <!--birthday input-->
+        <form id="birthday">
+            <p class="birthday_header">
+                Enter Your Birthday!
+            </p>
+            <input 
+                type="date"
+                id="birthdayInput"
+                value="0000-00-00"
+                min="1920-01-01"
+                max="2024-12-31">
+            <div class="button">
+                <input
+                    class="button_text"
+                    type="submit"
+                    value="submit">
+            </div>
+        </form>
+    </header>
+ 
+    <!--zodiac list-->
+    <main>
+        <div id="zodiacs">
+            <button id="mario" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="rosalina" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="peach" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="toad" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="kong" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="junior" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="toadette" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="daisy" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="yoshi" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="boo" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="bowser" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+            <button id="luigi" class="zodiac">
+                <img src="images/image_13.webp" alt="three dimensional gold coin from Super Mario game">
+            </button>
+        </div>
+    </main>
+
+<script src="/javascript/zodiac.js"></script>
 </body>
 </html>

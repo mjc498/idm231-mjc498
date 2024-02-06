@@ -14,3 +14,23 @@
 }
 
 /*colors*/
+:root {
+    --background-color: #A0CDE6;
+    --textbox-background: #43B047;
+    --button-text: #FBD000;
+    --header-text: #000000;
+    --primary-text: #EAEAEA;
+    --logo: #E52521;
+    --accent1: #F096BE; 
+    --accent2: #17419A;
+    --accent3: #5D2E8E;
+}
+
+* {
+    background-color: var(--background-color);
+}
+
+.header {
+    color: var(--header-text)
+}
+
