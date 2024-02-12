@@ -1,14 +1,14 @@
 /*fonts*/
 @font-face {
     font-family: silkscreen;
-    src: url(/fonts/silkscreen_regular.ttf) format("truetype");
+    src: url(/fonts/silkscreen.ttf) format("truetype");
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
-    font-family: silkscreen_bold;
-    src: url(/fonts/silkscreen_bold.ttf) format("truetype");
+    font-family: lunchtime;
+    src: url(../fonts/lunchtime.ttf) format("truetype");
     font-weight: 100;
     font-style: normal;
 }
@@ -17,9 +17,10 @@
 :root {
     --background-color: #A0CDE6;
     --textbox-background: #43B047;
-    --button-text: #FBD000;
-    --header-text: #000000;
-    --primary-text: #EAEAEA;
+    --primary-text: #ffffff;
+    --stroke: #000000;
+    --button: #FBD000;
+    --hover: #E0CF45;
     --logo: #E52521;
     --accent1: #F096BE; 
     --accent2: #17419A;
@@ -30,7 +31,35 @@
     background-color: var(--background-color);
 }
 
-.header {
-    color: var(--header-text)
+h1 {
+    color: var(--primary-text);
+    font-family: silkscreen;
+    font-size: 46px;
+    text-align: center;
+    -webkit-text-stroke: 3px var(--stroke);
 }
 
+input {
+    background-color: var(--button-text);
+    border-radius: 3px;
+    font-family: lunchtime;
+}
+
+.birthday_header {
+    color: var(--primary-text);
+    font-family: lunchtime;
+    font-size: 32px;
+    text-align: center;
+}
+
+.button {
+    color: var(--primary-text);
+    font-family: silkscreen;
+    font-size: 24px;
+    width: 150px;
+    height: 50px;
+}
+
+.button:hover {
+    background-color: var(--hover);
+}
