@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./css/zodiac.css" type="text/css">
 </head>
 
-<body>
+<!--HTML FOR SETTING IMAGE AS BACKGROUND-->
+<body style="background-image: url(images/background.svg);" alt="background">
 
 <!--title-->
     <h1>
@@ -38,7 +39,8 @@
  
 <!--zodiac list-->
     <main>
-        <div class="zodiacs">
+      <!--
+       <div class="zodiacs">
             <button id="mario" class="zodiac">
                 <img src="images/image_13.svg" alt="three dimensional gold coin from Super Mario game">
             </button>
@@ -75,9 +77,158 @@
             <button id="luigi" class="zodiac">
                 <img src="images/image_13.svg" alt="three dimensional gold coin from Super Mario game">
             </button>
-        </div>
-    </main>
+        </div>-->
+    
+    <div class="zodiacs">
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="mario">
+              </div>
+            </div>
+          </div>
 
-<script src="/javascript/zodiac.js"></script>
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="rosalina">
+              </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="princess peach">
+              </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="toad">
+              </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="donkey kong">
+              </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="bowser junior">
+              </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="toadette">
+              </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="princess daisy">
+              </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="yoshi">
+              </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="king boo">
+              </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="bowser">
+              </div>
+            </div>
+        </div>
+
+        <div class="flip-container">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <img src="images/coin.svg" alt="coin">
+              </div>
+              <div class="flip-back">
+                <img src="images/image_1.png" alt="luigi">
+              </div>
+            </div>
+        </div>
+    </div>
+
+<!--question-->
+  <button type="button" class="image-button" id="info-button">
+    <img src="images/question.png" alt="three dimensional gold question mark block from Super Mario game">
+  </button>
+
+  <div id="info-popup" class="hidden">
+    <h2>Instructions</h2>
+      <p>
+        Enter your birthday and press 'SUBMIT'.
+        Your horoscope will appear, showing a Super Mario World character and its description.
+        Press the 'X' button to submit another response.
+        Please remember to have fun!
+      </p>
+    </div>
+
+    </main>
+  <script src="/javascript/zodiac.js"></script>
 </body>
 </html>
