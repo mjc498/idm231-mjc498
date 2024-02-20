@@ -118,6 +118,15 @@ h1 {
 .image-button:hover img {
     opacity: 0.8; 
 }
+
+/*info pop up*/
+.hidden {
+    background-color: var(--accent1);
+    font-family: lunchtime;
+    font-size: 14px;
+    opacity: 0.8;
+    text-align: center;
+}
   
 /*submit*/
 .button {
