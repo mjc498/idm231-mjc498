@@ -123,7 +123,7 @@ h1 {
 .hidden {
     background-color: var(--accent1);
     font-family: lunchtime;
-    font-size: 14px;
+    font-size:18px;
     opacity: 0.8;
     text-align: center;
 }
