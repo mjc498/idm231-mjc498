@@ -15,16 +15,22 @@
 
 /*colors*/
 :root {
-    --background-color: #A0CDE6;
-    --textbox-background: #43B047;
+    --background-color: #a0cde6;
     --primary-text: #ffffff;
     --stroke: #000000;
-    --button: #FBD000;
-    --hover: #E0CF45;
-    --logo: #E52521;
-    --accent1: #F096BE; 
-    --accent2: #17419A;
-    --accent3: #5D2E8E;
+    --button: #fbd000;
+    --hover: #e0cf45;
+    --mario: #e52521;
+    --peach: #f096be; 
+    --rosalina: #1dd4b7;
+    --toad: #17419a;
+    --kong: #742607;
+    --junior: #f6ce09;
+    --daisy: #ee830a;
+    --yoshi: #70b921;
+    --boo: #95a4ae;
+    --bowser: #f8be10;
+    --luigi: #43b047;
 }
 
 /*background*/
@@ -47,7 +53,7 @@ body {
 /*super mario zodiac world*/
 h1 {
     border: 1px solid var(--stroke);
-    background-color: var(--logo);
+    background-color: var(--mario);
     color: var(--primary-text);
     font-family: silkscreen;
     font-size: 46px;
@@ -56,12 +62,16 @@ h1 {
 }
 
 /*enter your birthday*/
-.birthday_title {
-    color: var(--logo);
+h2 {
+    color: var(--mario);
     font-family: lunchtime;
     font-size: 32px;
     text-align: center;
     animation: blink 1s ease-in-out infinite;
+}
+
+h3 {
+  font-size: 28px;
 }
 
 @keyframes blink {
@@ -76,36 +86,84 @@ h1 {
     }
   }
 
-/*date input*/
+/*birthday input*/
+.birthday-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
 .container {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1rem;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-container {
+  flex: 1; 
+  margin: 0 10px; 
 }
 
 .date {
-    background-color: var(--primary-text);
-    font-family: lunchtime;
-    font-size: 14px;
-    border-radius: 10px;
-    width: 150px;
-    height: 25px;
+  background-color: var(--primary-text);
+  font-family: lunchtime;
+  font-size: 14px;
+  border-radius: 10px;
+  width: 150px;
+  height: 25px;
+}
+
+/*question*/
+.image-container {
+  margin-right: 20px; 
+}
+
+.image-button {
+  display: block;
+  background-color: transparent; 
+  border: none; 
+  cursor: pointer; 
+  width: 50px;
+  height: 50px;
+}
+
+.image-button img {
+  width: 50px;
+  height: 50px;
+}
+
+.image-button:hover img {
+  opacity: 0.8; 
+}
+
+.image-button:hover .question {
+  animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px); 
+  }
 }
 
 /*submit*/
+.submit-container {
+  margin-left: 10px;
+}
+
 .button {
   background-color: var(--button);
   color: var(--primary-text);
   font-family: silkscreen;
   font-size: 24px;
   cursor: pointer; 
-
   width: 150px;
-  height: 50px;
-  margin-top: 1rem;
+  height: 40px;
   border-radius: 10px;
   border-color: var(--primary-text);
 }
@@ -114,33 +172,10 @@ h1 {
   opacity: 0.8;
 }
 
-/*question*/
-.image-button {
-    display: inline-block; 
-    position: absolute;
-    background-color: transparent; 
-    border: none; 
-    padding: 0; 
-    cursor: pointer; 
-    right: 0;
-    bottom: 0;
-    width: 50px;
-    height: 50px;
-}
-  
-.image-button img {
-    width: 50px;
-    height: 50px;
-}
-  
-.image-button:hover img {
-    opacity: 0.8; 
-}
-
 /*question popup*/
 .hidden {
     display: none;
-    background-color: var(--accent1);
+    background-color: var(--peach);
     font-family: lunchtime;
     font-size:18px;
     opacity: 0.8;
@@ -154,7 +189,7 @@ h1 {
   width: 100%; 
   padding: 20px;
   box-sizing: border-box;
-  background-color: var(--accent1);
+  background-color: var(--peach);
   color: var(--stroke);
   font-family: lunchtime;
   font-size: 18px;
@@ -174,7 +209,7 @@ h1 {
   font-size: 28px;
 }
 
-/*zodiacs*/
+/*grid*/
 .zodiacs {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -182,6 +217,12 @@ h1 {
     grid-column-gap: 12px;
     grid-row-gap: 12px;
     align-items: center;
+}
+
+.coin-container,
+.popup {
+  padding: 60px;
+  margin-left: 40px;
 }
 
 /*coins*/
@@ -219,17 +260,69 @@ h1 {
 }
 
 /*coins popup*/
-.popup {
+.popup,
+.popup2,
+.popup3,
+.popup4,
+.popup5,
+.popup6,
+.popup8,
+.popup9,
+.popup10,
+.popup11,
+.popup12 {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); 
-  background-color: var(--logo);
+  background-color: var(--mario);
   color: var(--primary-text);
   font-family: lunchtime;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid var(--stroke);
   display: none; 
+  margin-top: 50px;
+  z-index: 2;
+}
+
+.popup2 {
+  background-color: var(--rosalina);
+}
+
+.popup3 {
+  background-color: var(--peach);
+}
+
+.popup4 {
+  background-color: var(--toad);
+}
+
+.popup5 {
+  background-color: var(--kong);
+}
+
+.popup6 {
+  background-color: var(--junior);
+}
+
+.popup8 {
+  background-color: var(--daisy);
+}
+
+.popup9 {
+  background-color: var(--yoshi);
+}
+
+.popup10 {
+  background-color: var(--boo);
+}
+
+.popup11 {
+  background-color: var(--bowser);
+}
+
+.popup12 {
+  background-color: var(--luigi);
 }
 
 .popupHeader {

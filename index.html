@@ -10,35 +10,61 @@
 <!--background-->
 <body style="background-image: url(images/background.svg);">
 
-<!--title-->
+<!--headers-->
   <h1>
     SUPER MARIO ZODIAC WORLD
   </h1>
+  <h2>
+    Enter Your Birthday!
+  </h2>
 
-<!--form-->
-  <form id="birthday">
+<!--question-->
+  <form id="birthday" class="birthday-form">
     <div class="container">
-        <p class="birthday_title">
-            Enter Your Birthday!
-        </p>
-        <input 
-            class="date"
-            type="date"
-            id="birthdayInput"
-            value="0000-00-00"
-            min="1920-01-01"
-            max="2024-12-31">
+      <div class="image-container">
+        <button type="button" class="image-button" id="info-button">
+          <img 
+            class="question box" 
+            src="images/question.png" 
+            alt="three-dimensional gold question mark block from Super Mario game">
+        </button>
+      </div>
+
+<!--question popup-->
+  <div id="info-popup" class="hidden">
+    <h3>Instructions</h3>
+      <p>
+        Enter your birthday and press 'SUBMIT'.<br>
+        Your horoscope will appear, showing a Super Mario World character and its description.<br>
+        Press the 'X' button to submit another response.<br>
+        Have fun!
+      </p>
+      <button type="button" class="closeButton">X</button>
     </div>
-    <div class="container">
-        <input
-            class="button"
-            type="submit"
-            value="submit">
+
+<!--date input-->
+    <div class="date-container">
+      <input 
+        class="date" 
+        type="date" 
+        id="birthdayInput" 
+        value="0000-00-00" 
+        in="1920-01-01" 
+        max="2024-12-31">
     </div>
+
+<!--submit-->
+  <div class="submit-container">
+    <input 
+      class="button" 
+      type="submit" 
+      value="submit">
+  </div>
+  </div>
   </form>
- 
-  <main>
-  <!--mario / aries-->
+
+<!--aries-->
+<main>
   <div class="zodiacs">
     <div class="coin-container">
       <audio 
@@ -55,7 +81,6 @@
         src="./images/01aries_mario.png" 
         alt="mario character from super mario bros">
     </div>
-
     <div class="popup">
       <p class="popupHeader">Mario (Aries)</p>
       <p>March 21 - April 19</p>
@@ -63,10 +88,13 @@
       <p>Just like Mario, the main hero of Mushroom Kingdom, 
         you possess a strong sense of independence and a willingness to take on challenges. 
         You're always ready to jump into action and achieve your goals with determination.</p>
+      </p>Aries hold the invaluable trait of independence and Mario uses exactly that to his advantage. 
+        While solving problems with simply running and jumping, 
+        he is sure to achieve whatever goal he wishes to achieve.</p>
       <button type="button" class="closePopup">X</button>
     </div>
 
-<!--rosalina / taurus-->
+<!--taurus-->
     <div class="coin-container">
       <audio 
         class="audio" 
@@ -76,44 +104,316 @@
       <img 
         class="coin front" 
         src="./images/coin.svg" 
-        alt="front side of goin mario coin">
+        alt="front side of gold mario coin">
       <img 
         class="coin back hidden" 
         src="./images/02taurus_rosalina.png" 
         alt="rosalina character from super mario bros">
     </div>
-
-    <div class="popup">
-      <p class="popupHeader">Mario (Aries)</p>
-      <p>March 21 - April 19</p>
-      <p>You share a horoscope with Mario!</p>
-      <p>Just like Mario, the main hero of Mushroom Kingdom, 
-        you possess a strong sense of independence and a willingness to take on challenges. 
-        You're always ready to jump into action and achieve your goals with determination.</p>
+    <div class="popup2">
+      <p class="popupHeader">Rosalina (Taurus)</p>
+      <p>April 20 - May 20</p>
+      <p>You share a horoscope with Rosalina!</p>
+      <p>Although a lesser known character in Super Mario Land, 
+        Rosalina exhibits the most care and protective nature. 
+        She may seem a bit distant, but she is very kind-hearted.</p>
+      <p>Taureans are the ideal friend— 
+        they understand others easily and are willing to use the power of friendship to accomplish anything. 
+        Rosalina demonstrates how single-minded determination can be used productively despite some stubbornness.</p>
       <button type="button" class="closePopup">X</button>
     </div>
-</div>
 
-<!--question-->
-  <button type="button" class="image-button" id="info-button">
+<!--gemini-->
+  <div class="coin-container">
+    <audio 
+      class="audio" 
+      src="./audio/audio_3.mp3"
+      alt="princess peach character from super mario bros sound effect">
+    </audio>
     <img 
-      class="question box"
-      src="images/question.png" 
-      alt="three dimensional gold question mark block from Super Mario game">
-  </button>
+      class="coin front" 
+      src="./images/coin.svg" 
+      alt="front side of gold mario coin">
+    <img 
+      class="coin back hidden" 
+      src="./images/03gemini_peach.png" 
+      alt="princess peach character from super mario bros">
+  </div>
+  <div class="popup3">
+    <p class="popupHeader">Princess Peach (Gemini)</p>
+    <p>May 21 - June 21</p>
+    <p>You share a horoscope with Princess Peach!</p>
+    <p>As the beloved princess of Mushroom Kingdom, 
+      Peach exemplifies that intelligence can come in many forms. 
+      This characteristic has helped make her a kind and well-loved ruler.</p>
+    <p>Geminis are aware of their intelligent capabilities and fervent imagination. 
+      The praised princess consistently manages to escape from the hands of the King Koopa with her social adeptness and agency.</p>
+    <button type="button" class="closePopup">X</button>
+  </div>
 
-<!--question popup-->
-        <div id="info-popup" class="hidden">
-        <h2>Instructions</h2>
-          <p>
-            Enter your birthday and press 'SUBMIT'.<br>
-            Your horoscope will appear, showing a Super Mario World character and its description.<br>
-            Press the 'X' button to submit another response.<br>
-            Have fun!
-          </p>
-          <button type="button" class="closeButton">X</button>
-        </div>
+<!--cancer-->
+  <div class="coin-container">
+    <audio 
+      class="audio" 
+      src="./audio/audio_4.mp3"
+      alt="toad character from super mario bros sound effect">
+    </audio>
+    <img 
+      class="coin front" 
+      src="./images/coin.svg" 
+      alt="front side of gold mario coin">
+    <img 
+      class="coin back hidden" 
+      src="./images/04cancer_toad.png" 
+      alt="toad character from super mario bros">
+  </div>
+  <div class="popup4">
+    <p class="popupHeader">Toad (Cancer)</p>
+    <p>June 22 - July 22</p>
+    <p>You share a horoscope with Toad!</p>
+    <p>Displaying his exemplary intuition,
+      Toad is the first to recognize when things are going wrong. 
+      His prickliness and outbursts in situations of high stress shows how much of an empath he tends to be.</p>
+    <p>Cancers display constant loyalty and dedication in all their connections. 
+      Toad does his best to help others in their efforts from Bowser, 
+      even if he endangers himself in the process.</p>
+    <button type="button" class="closePopup">X</button>
+  </div>
 
+<!--leo-->
+  <div class="coin-container">
+    <audio 
+      class="audio" 
+      src="./audio/audio_5.mp3"
+      alt="donkey kong character from super mario bros sound effect">
+    </audio>
+    <img 
+      class="coin front" 
+      src="./images/coin.svg" 
+      alt="front side of gold mario coin">
+    <img 
+      class="coin back hidden" 
+      src="./images/05leo_kong.png" 
+      alt="donkey kong character from super mario bros">
+  </div>
+  <div class="popup5">
+    <p class="popupHeader">Donkey Kong (Leo)</p>
+    <p>July 23 - August 22</p>
+    <p>You share a horoscope with Donkey Kong!</p>
+    <p>Born as the king of the jungle, 
+      DK tends to be the center of attention. 
+      He never tends to slip into the background of things.</p>
+    <p>Leos present charisma and enjoys the commanding of others. 
+      His emotions, specifically anger, 
+      do not seem to hinder his position of a great role model. 
+      However, Kong's physical and emotional strength may lead to walking over others without even realizing it. </p>
+    <button type="button" class="closePopup">X</button>
+  </div>
+
+<!--virgo-->
+  <div class="coin-container">
+    <audio 
+      class="audio" 
+      src="./audio/audio_6.mp3"
+      alt="bowser junior character from super mario bros sound effect">
+    </audio>
+    <img 
+      class="coin front" 
+      src="./images/coin.svg" 
+      alt="front side of gold mario coin">
+    <img 
+      class="coin back hidden" 
+      src="./images/06virgo_junior.png" 
+      alt="bowser junior character from super mario bros">
+  </div>
+  <div class="popup6">
+    <p class="popupHeader">Bowser Junior (Virgo)</p>
+    <p>August 23 - September 22</p>
+    <p>You share a horoscope with Bowser Junior!</p>
+    <p>As the son of his highness Bowser, 
+      Bowser Junior works intensely hard to please his father. 
+      He throws tantrums if things do not go his way and causes plenty of trouble because of his selfishness.</p>
+    <p>Virgos may often let their anger control the situations which leads to the best plans ultimately falling apart. 
+      Bowser Junior easily loses Princess Peach as easily as he helps in her kidnapping. 
+      His fortitude to continue this process is admiring.</p>
+    <button type="button" class="closePopup">X</button>
+  </div>
+
+<!--libra-->
+  <div class="coin-container">
+    <audio 
+      class="audio" 
+      src="./audio/audio_7.mp3"
+      alt="toadette character from super mario bros sound effect">
+    </audio>
+    <img 
+      class="coin front" 
+      src="./images/coin.svg" 
+      alt="front side of gold mario coin">
+    <img 
+      class="coin back hidden" 
+      src="./images/07libra_toadette.jpeg" 
+      alt="toadette character from super mario bros">
+  </div>
+  <div class="popup3">
+    <p class="popupHeader">Toadette (Libra)</p>
+    <p>September 23 - October 23</p>
+    <p>You share a horoscope with Toadette!</p>
+    <p>Often in the background, 
+      Toadette always never forgets to bring everyone together— 
+      especially when it comes to playing games in Mario Party. 
+      Her calmness and kindness balances out well in her companionship with the anxious Toad.</p>
+    <p>Libras tend to romanticize life and are known to be great listeners as well. 
+      Her charming persona helps balance well with her partner’s emotional struggles.</p>
+    <button type="button" class="closePopup">X</button>
+  </div>
+
+<!--scorpio-->
+  <div class="coin-container">
+    <audio 
+      class="audio" 
+      src="./audio/audio_8.mp3"
+      alt="princess daisy character from super mario bros sound effect">
+    </audio>
+    <img 
+      class="coin front" 
+      src="./images/coin.svg" 
+      alt="front side of gold mario coin">
+    <img 
+      class="coin back hidden" 
+      src="./images/08scorpio_daisy.png" 
+      alt="princess daisy character from super mario bros">
+  </div>
+  <div class="popup8">
+    <p class="popupHeader">Princess Daisy (Scorpio)</p>
+    <p>October 24 - November 21</p>
+    <p>You share a horoscope with Princess Daisy!</p>
+    <p>Being less formal compared to the other princess of Mario Land, 
+      Daisy’s ambitious personality makes her stand out from the rest. 
+      She is not afraid to be herself.</p>
+    <p>Scorpios often come across as brusque, rude, or even secretive without meaning to. 
+      Their intuitive nature can help them in solving issues without bringing unnecessary attention to it.
+      In Princess Daisy’s case, this translates to her competitiveness.</p>
+    <button type="button" class="closePopup">X</button>
+  </div>
+
+<!--sagittarius-->
+  <div class="coin-container">
+    <audio 
+      class="audio" 
+      src="./audio/audio_9.mp3"
+      alt="yoshi character from super mario bros sound effect">
+    </audio>
+    <img 
+      class="coin front" 
+      src="./images/coin.svg" 
+      alt="front side of gold mario coin">
+    <img 
+      class="coin back hidden" 
+      src="./images/09sag_yoshi.png" 
+      alt="yoshi character from super mario bros">
+  </div>
+  <div class="popup9">
+    <p class="popupHeader">Yoshi (Sagittarius)</p>
+    <p>November 22 - December 21</p>
+    <p>You share a horoscope with Yoshi!</p>
+    <p>Without ever talking, Yoshi can make himself loud and clear in other ways. 
+      His carefree attitudes adds onto his bright and bouncy personality.</p>
+    <p>Sagittariuses are energetic, optimistic, and adventurous. 
+      Yoshi is willing to help his friends without second guesses. 
+      It is hard to imagine him ever complaining when the solution is to push forward through any and all problems.</p>
+    <button type="button" class="closePopup">X</button>
+  </div>
+
+<!--capricorn-->
+  <div class="coin-container">
+    <audio 
+      class="audio" 
+      src="./audio/audio_10.mp3"
+      alt="king boo character from super mario bros sound effect">
+    </audio>
+    <img 
+      class="coin front" 
+      src="./images/coin.svg" 
+      alt="front side of gold mario coin">
+    <img 
+      class="coin back hidden" 
+      src="./images/10capricorn_boo.png" 
+      alt="king boo character from super mario bros">
+  </div>
+  <div class="popup10">
+    <p class="popupHeader">King Boo (Capricorn)</p>
+    <p>December 22 - January 19</p>
+    <p>You share a horoscope with King Boo!</p>
+    <p>Setting himself apart from the other enemies, 
+      King Boo uses his ghastly skills to flee towards safety without putting himself at risk. 
+      He uses critical thinking skills to escape suspicious situations.</p>
+    <p>Capricorns are usually disciplined, but also quite pessimistic. 
+      As the leader of the Boos and ghosts, 
+      King Boo tends to scheme quietly in his mansion while aiding in Bowser’s capture of Princess Peach.</p>
+    <button type="button" class="closePopup">X</button>
+  </div>
+
+<!--aquarius-->
+  <div class="coin-container">
+    <audio 
+      class="audio" 
+      src="./audio/audio_11.mp3"
+      alt="bowser character from super mario bros sound effect">
+    </audio>
+    <img 
+      class="coin front" 
+      src="./images/coin.svg" 
+      alt="front side of gold mario coin">
+    <img 
+      class="coin back hidden" 
+      src="./images/11aquarius_bowser.png" 
+      alt="bowser character from super mario bros">
+  </div>
+  <div class="popup11">
+    <p class="popupHeader">Bowser (Aquarius)</p>
+    <p>January 20 - February 18</p>
+    <p>You share a horoscope with Bowser!</p>
+    <p>Given his powerful position, 
+      Bowser shows his ruthlessness as an uncompromising villain. 
+      The King of the Koopas is hesitant to express his emotions and comes out to be temperamental in conquering the Mushroom Kingdom.</p>
+    <p>Aquariuses are problem-solvers with unique characteristics. 
+      Bowser shows his innovative and creative ways of thinking throughout the process of kidnapping the love of his life— 
+      Princess Peach.</p>
+    <button type="button" class="closePopup">X</button>
+  </div>
+
+<!--pisces-->
+  <div class="coin-container">
+    <audio 
+      class="audio" 
+      src="./audio/audio_12.mp3"
+      alt="luigi character from super mario bros sound effect">
+    </audio>
+    <img 
+      class="coin front" 
+      src="./images/coin.svg" 
+      alt="front side of gold mario coin">
+    <img 
+      class="coin back hidden" 
+      src="./images/12pisces_luigi.png" 
+      alt="luigi character from super mario bros">
+  </div>
+  <div class="popup12">
+    <p class="popupHeader">Luigi (Pisces)</p>
+    <p>February 19 - March 20</p>
+    <p>You share a horoscope with Luigi!</p>
+    <p>As another fellow hero of Mushroom Kingdom, 
+      Luigi is a kind and well-rounded introverted character. 
+      The dynamic between him and his Aries brother Mario shows his need to escape from the spotlight of Mario— 
+      after all, he is his own person.</p>
+    <p>Pisces usually show signs of escapism and are closed off. 
+      Luigi’s minimal dialogue never hinders his empathy to remain a natural healer. 
+      He picks up crumbs left behind by Mario, 
+      yet never seems to dream about swapping places with him.</p>
+    <button type="button" class="closePopup">X</button>
+    </div>
+  </div>
 </main>
 <script src="./javascript/zodiac.js"></script>
 </body>
