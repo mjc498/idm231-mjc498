@@ -100,3 +100,4 @@ function astrological_sign(day, month) {
   }
   return astrological_sign;
 }
+
