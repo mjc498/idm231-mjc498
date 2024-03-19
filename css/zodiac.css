@@ -27,7 +27,7 @@
     --accent3: #5D2E8E;
 }
 
-/*image as background*/
+/*background*/
 body {
     margin: 0;
     padding: 0;
@@ -44,16 +44,15 @@ body {
     width: max-content;
 }
 
-/*"Super Mario Zodiac World" HEADER*/
+/*super mario zodiac world*/
 h1 {
+    border: 1px solid var(--stroke);
+    background-color: var(--logo);
     color: var(--primary-text);
     font-family: silkscreen;
     font-size: 46px;
     text-align: center;
-    -webkit-text-stroke: 3px var(--stroke);
-
-    background-color: var(--logo);
-    border: 3px solid var(--stroke);
+    -webkit-text-stroke: 5px var(--stroke);
 }
 
 /*enter your birthday*/
@@ -62,7 +61,6 @@ h1 {
     font-family: lunchtime;
     font-size: 32px;
     text-align: center;
-
     animation: blink 1s ease-in-out infinite;
 }
 
@@ -78,36 +76,56 @@ h1 {
     }
   }
 
+/*date input*/
 .container {
-    text-align: center;
     display: flex;
     justify-content: center;
     padding-bottom: 1rem;
-    display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .date {
     background-color: var(--primary-text);
     font-family: lunchtime;
     font-size: 14px;
+    border-radius: 10px;
     width: 150px;
     height: 25px;
-    border-radius: 10px;
 }
 
-/*question button*/
+/*submit*/
+.button {
+  background-color: var(--button);
+  color: var(--primary-text);
+  font-family: silkscreen;
+  font-size: 24px;
+  cursor: pointer; 
+
+  width: 150px;
+  height: 50px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  border-color: var(--primary-text);
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+/*question*/
 .image-button {
+    display: inline-block; 
+    position: absolute;
     background-color: transparent; 
     border: none; 
     padding: 0; 
-    display: inline-block; 
     cursor: pointer; 
-
-    position: absolute;
     right: 0;
     bottom: 0;
+    width: 50px;
+    height: 50px;
 }
   
 .image-button img {
@@ -119,34 +137,44 @@ h1 {
     opacity: 0.8; 
 }
 
-/*info pop up*/
+/*question popup*/
 .hidden {
+    display: none;
     background-color: var(--accent1);
     font-family: lunchtime;
     font-size:18px;
     opacity: 0.8;
     text-align: center;
 }
-  
-/*submit*/
-.button {
-    background-color: var(--button);
-    color: var(--primary-text);
-    font-family: silkscreen;
-    font-size: 24px;
-    cursor: pointer; 
 
-    width: 150px;
-    height: 50px;
-    margin-top: 1rem;
-    border-radius: 10px;
-    border-color: var(--primary-text);
+#info-popup {
+  position: fixed; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--accent1);
+  color: var(--stroke);
+  font-family: lunchtime;
+  font-size: 18px;
+  opacity: 0.8;
 }
 
-.button:hover {
-    opacity: 0.8;
+.closeButton {
+  position: absolute; 
+  top: 5px; 
+  right: 5px; 
+  color: var(--stroke);
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none; 
+  font-family: silkscreen;
+  font-size: 28px;
 }
 
+/*zodiacs*/
 .zodiacs {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -157,35 +185,77 @@ h1 {
 }
 
 /*coins*/
-.flip-container {
-  perspective: 1000px; 
-  width: 75px; 
-  height: 75px; 
-  align-items: center;
+.coin-container {
+  position: relative; 
 }
 
-.flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s ease-in-out;
+.coin {
+  width: 100px; 
+  height: 100px;
+  cursor: pointer; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  border-radius: 50%; 
+  background-color: var(--primary-text);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; 
 }
 
-.flip-front, .flip-back {
+.coin.flipped {
+  transform: rotateY(180deg); 
+  opacity: 0; 
+}
+
+.front {
+  z-index: 1; 
+}
+
+.back {
+  z-index: 0; 
+}
+
+.hidden {
+  opacity: 0; 
+}
+
+/*coins popup*/
+.popup {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: var(--logo);
+  color: var(--primary-text);
+  font-family: lunchtime;
+  padding: 20px;
+  border: 1px solid var(--stroke);
+  display: none; 
 }
 
-.flip-front {
-  transform: rotateY(0deg);
+.popupHeader {
+  margin-top: 0; 
+  font-size: 1.2em; 
+  font-weight: bolder;
 }
 
-.flip-back {
-  transform: rotateY(180deg);
+.popup p {
+  margin-bottom: 10px; 
 }
 
-.flip-container:hover .flip-inner {
-  transform: rotateY(-180deg);
+.closePopup {
+  position: absolute; 
+  top: 10px; 
+  right: 10px; 
+  background-color: transparent; 
+  color: var(--primary-text);
+  font-family: silkscreen;
+  border: none; 
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.closePopup:hover,
+.closeButton:hover {
+  transform: rotate(180deg); 
+  transition: transform 0.3s ease-in-out; 
 }
