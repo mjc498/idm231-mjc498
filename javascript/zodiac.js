@@ -51,26 +51,6 @@ function closeAllPopups() {
 }
 
 // zodiac popup 
-closePopup.addEventListener('click', () => {
-  popup.style.display = 'none'; 
-});
-
-// dates 
-const signs = [
-  { name: 'Aries', image: '01aries_mario.png', audio: 'audio_1.mp3' },
-  { name: 'Taurus', image: '02taurus_rosalina.png', audio: 'audio_2.mp3' },
-  { name: 'Gemini', image: '03gemini_peach.png', audio: 'audio_3.mp3' },
-  { name: 'Cancer', image: '04cancer_toad.png', audio: 'audio_4.mp3' },
-  { name: 'Leo', image: '05leo_kong.png', audio: 'audio_5.mp3' },
-  { name: 'Virgo', image: '06virgo_junior.png', audio: 'audio_6.mp3' },
-  { name: 'Libra', image: '07libra_toadette.jpeg', audio: 'audio_7.mp3' },
-  { name: 'Scorpio', image: '08scorpio_daisy.png', audio: 'audio_8.mp3' },
-  { name: 'Sagittarius', image: '09sag_yoshi.png', audio: 'audio_9.mp3' },
-  { name: 'Capricorn', image: '10capricorn_boo.png', audio: 'audio_10.mp3' },
-  { name: 'Aquarius', image: '11aquarius_bowser.png', audio: 'audio_11.mp3' },
-  { name: 'Pisces', image: '12pisces_luigi.png', audio: 'audio_12.mp3' }
-];
-
 function astrological_sign(day, month) {
   let astrological_sign = "";
   if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
@@ -101,3 +81,7 @@ function astrological_sign(day, month) {
   return astrological_sign;
 }
 
+const popup = document.querySelector(`.popup${signs.findIndex(sign => sign.name === astrologicalSign) + 1}`);
+if (popup) {
+  popup.style.display = 'block';
+}

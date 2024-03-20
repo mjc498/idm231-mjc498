@@ -222,7 +222,7 @@ h3 {
 .coin-container,
 .popup {
   padding: 60px;
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
 /*coins*/
@@ -279,7 +279,7 @@ h3 {
   color: var(--primary-text);
   font-family: lunchtime;
   padding: 10px;
-  border: 1px solid var(--stroke);
+  border: 2px solid var(--stroke);
   display: none; 
   margin-top: 50px;
   z-index: 2;
