@@ -18,55 +18,56 @@
     Enter Your Birthday!
   </h2>
 
-<!--question-->
-  <form id="birthday" class="birthday-form">
-    <div class="container">
-      <div class="image-container">
-        <button type="button" class="image-button" id="info-button">
-          <img 
-            class="question box" 
-            src="images/question.png" 
-            alt="three-dimensional gold question mark block from Super Mario game">
-        </button>
+
+<!-- Question -->
+<form id="birthdayForm" class="birthday-form">
+  <div class="container">
+    <div class="image-container">
+      <button type="button" class="image-button" id="info-button">
+        <img 
+          class="question box" 
+          src="images/question.png" 
+          alt="three-dimensional gold question mark block from Super Mario game">
+      </button>
+    </div>
+    <!-- Instructions Popup -->
+    <div id="info-popup" class="hidden">
+      <h3>Instructions</h3>
+        <p>
+          Enter your birthday and press 'SUBMIT'.<br>
+          Your horoscope will appear, showing a Super Mario World character and its description.<br>
+          Press the 'X' button to submit another response.<br>
+          Have fun!
+        </p>
+        <button type="button" class="closeButton">X</button>
+      </div>
+      <!-- Date input -->
+      <div class="date-container">
+          <input
+              class="date"
+              type="date"
+              id="birthdayInput"
+              value="0000-00-00"
+              min="1920-01-01"
+              max="2024-12-31">
       </div>
 
-<!--question popup-->
-  <div id="info-popup" class="hidden">
-    <h3>Instructions</h3>
-      <p>
-        Enter your birthday and press 'SUBMIT'.<br>
-        Your horoscope will appear, showing a Super Mario World character and its description.<br>
-        Press the 'X' button to submit another response.<br>
-        Have fun!
-      </p>
-      <button type="button" class="closeButton">X</button>
-    </div>
-
-<!--date input-->
-    <div class="date-container">
-      <input 
-        class="date" 
-        type="date" 
-        id="birthdayInput" 
-        value="0000-00-00" 
-        in="1920-01-01" 
-        max="2024-12-31">
-    </div>
-
-<!--submit-->
-  <div class="submit-container">
-    <input 
-      class="button" 
-      type="submit" 
-      value="submit">
+      <!-- Submit button -->
+      <div class="submit-container">
+          <input
+              class="button"
+              type="button"
+              value="Submit"
+              id="submit-button"
+              onclick="collectBirthday()">
+      </div>
   </div>
-  </div>
-  </form>
+</form>
 
 <!--aries-->
 <main>
   <div class="zodiacs">
-    <div class="coin-container">
+    <div class="coin-container" data-sign="Aries">
       <audio 
         class="audio" 
         src="./audio/audio_1.mp3"
@@ -95,7 +96,7 @@
     </div>
 
 <!--taurus-->
-    <div class="coin-container">
+    <div class="coin-container" data-sign="Taurus">
       <audio 
         class="audio" 
         src="./audio/audio_2.mp3"
@@ -124,7 +125,7 @@
     </div>
 
 <!--gemini-->
-  <div class="coin-container">
+  <div class="coin-container" data-sign="Gemini">
     <audio 
       class="audio" 
       src="./audio/audio_3.mp3"
@@ -152,7 +153,7 @@
   </div>
 
 <!--cancer-->
-  <div class="coin-container">
+  <div class="coin-container" data-sign="Cancer">
     <audio 
       class="audio" 
       src="./audio/audio_4.mp3"
@@ -181,7 +182,7 @@
   </div>
 
 <!--leo-->
-  <div class="coin-container">
+  <div class="coin-container" data-sign="Leo">
     <audio 
       class="audio" 
       src="./audio/audio_5.mp3"
@@ -211,7 +212,7 @@
   </div>
 
 <!--virgo-->
-  <div class="coin-container">
+  <div class="coin-container" data-sign="Virgo">
     <audio 
       class="audio" 
       src="./audio/audio_6.mp3"
@@ -240,7 +241,7 @@
   </div>
 
 <!--libra-->
-  <div class="coin-container">
+  <div class="coin-container" data-sign="Libra">
     <audio 
       class="audio" 
       src="./audio/audio_7.mp3"
@@ -269,7 +270,7 @@
   </div>
 
 <!--scorpio-->
-  <div class="coin-container">
+  <div class="coin-container" data-sign="Scorpio">
     <audio 
       class="audio" 
       src="./audio/audio_8.mp3"
@@ -298,7 +299,7 @@
   </div>
 
 <!--sagittarius-->
-  <div class="coin-container">
+  <div class="coin-container" data-sign="Sagittarius">
     <audio 
       class="audio" 
       src="./audio/audio_9.mp3"
@@ -326,7 +327,7 @@
   </div>
 
 <!--capricorn-->
-  <div class="coin-container">
+  <div class="coin-container" data-sign="Capricorn">
     <audio 
       class="audio" 
       src="./audio/audio_10.mp3"
@@ -355,7 +356,7 @@
   </div>
 
 <!--aquarius-->
-  <div class="coin-container">
+  <div class="coin-container" data-sign="Aquarius">
     <audio 
       class="audio" 
       src="./audio/audio_11.mp3"
@@ -384,7 +385,7 @@
   </div>
 
 <!--pisces-->
-  <div class="coin-container">
+  <div class="coin-container" data-sign="Pisces">
     <audio 
       class="audio" 
       src="./audio/audio_12.mp3"
