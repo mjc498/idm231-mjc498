@@ -91,6 +91,10 @@ coinContainers.forEach(coinContainer => {
     popup.style.display = 'block';
     audio.play();
   });
+
+  closePopup.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
 });
 
 function closeAllPopups() {
