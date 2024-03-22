@@ -5,6 +5,23 @@ submitButton.addEventListener('click', function() {
   triggerCoinClick(astrological_sign_value);
 });
 
+// astrological sign popup
+function collectBirthday() {
+  var birthdayInput = document.getElementById('birthdayInput').value;
+
+  var birthdayParts = birthdayInput.split('-');
+  var month = parseInt(birthdayParts[1]); 
+  var day = parseInt(birthdayParts[2]);   
+
+  console.log('Month:', month); // check value
+  console.log('Day:', day); // check value
+
+  var astrological_sign_value = astrological_sign(day, month);
+  console.log(astrological_sign_value);
+
+  return astrological_sign_value;
+}
+
 // list
 function astrological_sign(day, month) {
   let astrological_sign = "";
@@ -35,23 +52,6 @@ function astrological_sign(day, month) {
   }
   return astrological_sign;
   }
-
-// astrological sign popup
-function collectBirthday() {
-  var birthdayInput = document.getElementById('birthdayInput').value;
-
-  var birthdayParts = birthdayInput.split('-');
-  var month = parseInt(birthdayParts[1]); 
-  var day = parseInt(birthdayParts[2]);   
-
-  console.log('Month:', month); // check value
-  console.log('Day:', day); // check value
-
-  var astrological_sign_value = astrological_sign(day, month);
-  console.log(astrological_sign_value);
-
-  return astrological_sign_value;
-}
 
 // match date to coin
 function triggerCoinClick(astrologicalSign) {
